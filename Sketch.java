@@ -75,13 +75,17 @@ public class Sketch extends PApplet {
     int intY = 0;
 
     for(int intRow = 0; intRow < 30; intRow++){
-      for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 3 + 0;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + 0; //Instead of zero, calculate the proper intY location using 'intColumn'
-
+      for(int intColumn = 0; intColumn < 300; intColumn++){
+        
+        intX = 3 + intRow*10;  //Instead of zero, calculate the proper intX location using 'intRow'
+        intY = 300 + 3 + intColumn*10; //Instead of zero, calculate the proper intY location using 'intColumn'
+        
+      
+        
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
+
 
       }
     }
@@ -92,7 +96,28 @@ public class Sketch extends PApplet {
    * Don't loop from 30 to 60 to shift everything over, just add 300 to x.
    */
   public void draw_section2(){
+    int twoX = 0;
+    int twoY = 0;
 
+    for(int twoRow = 0; twoRow < 30; twoRow++){
+      for(int twoColumn = 0; twoColumn < 300; twoColumn++){
+        
+        twoX = 300 + 3 + twoRow*10;  //Instead of zero, calculate the proper intX location using 'intRow'
+        twoY = 300 + 3 + twoColumn*10; //Instead of zero, calculate the proper intY location using 'intColumn'
+
+        if(twoRow%2 ==0){
+          fill(255);
+          noStroke();
+          rect(twoX, twoY, 5, 5);
+        }
+        
+        if(twoRow%2 !=0){
+          fill(0);
+          noStroke();
+          rect(twoX, twoY, 5, 5);
+        }
+      }
+    }
   }
 
   /**
@@ -100,7 +125,29 @@ public class Sketch extends PApplet {
    * Don't use multiple 'if' statements.
    */
   public void draw_section3(){
+    int threeX = 0;
+    int threeY = 0;
 
+    for(int threeRow = 0; threeRow < 30; threeRow++){
+      for(int threeColumn = 0; threeColumn < 300; threeColumn++){
+        
+        threeX = 600 + 3 + threeRow*10;  //Instead of zero, calculate the proper intX location using 'intRow'
+        threeY = 300 + 3 + threeColumn*10; //Instead of zero, calculate the proper intY location using 'intColumn'
+        
+      
+        if(threeColumn%2 ==0){
+          fill(255);
+          noStroke();
+          rect(threeX, threeY, 5, 5);
+        }
+        
+        else{
+          fill(0);
+          noStroke();
+          rect(threeX, threeY, 5, 5);
+        }
+      }
+    }
   }
 
   /**
