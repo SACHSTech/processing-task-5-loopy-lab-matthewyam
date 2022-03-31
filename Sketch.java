@@ -187,13 +187,12 @@ public class Sketch extends PApplet {
     int fiveX = 0;
     int fiveY = 0;
     int fiverowCount=0;
-    int fivecolumnCount=0;
 
-    for(int fiveColumn = 30; fivecolumnCount < fiveColumn; fiveColumn--){
+    for(int fiveColumn = 30; 0 < fiveColumn; fiveColumn--){
       for(int fiveRow = 30; fiverowCount < fiveRow; fiveRow--){
         
-        fiveX = 3 - 10 + fiveRow*300/30;  
-        fiveY = 3 + fiveColumn*300/30; 
+        fiveX = -7 + fiveRow*10;  
+        fiveY = 3 + fiveColumn*10; 
         
       
         
@@ -203,21 +202,21 @@ public class Sketch extends PApplet {
 
 
       }
-      fiverowCount += 1;
+      fiverowCount ++;
     }
   }
 
   public void draw_section6(){
     int sixX = 0;
-    int sixY = 0;
+    int sixY = 1;
     int sixrowCount=30;
-    int sixcolumnCount=0;
+ 
 
-    for(int sixColumn = 30; sixcolumnCount < sixColumn; sixColumn--){
-      for(int sixRow = 0; sixRow < sixrowCount; sixRow++){
+    for(int sixColumn = 30; 0 < sixColumn; sixColumn--){
+      for(int sixRow =0; sixRow < sixrowCount; sixRow++){
         
-        sixX =300 + 3 + sixRow*300/30; 
-        sixY = 3 + sixColumn*300/30;
+        sixX =300 + 3 + sixRow*10; 
+        sixY = -6 + sixColumn*10;
         
       
         
@@ -227,21 +226,57 @@ public class Sketch extends PApplet {
 
 
       }
-      sixrowCount -= 1;
+      sixrowCount --;
     }
   }
 
   public void draw_section7(){
+    int sevenX = 0;
+    int sevenY = 0;
+    int sevenrowCount=30;
+    int sevencolumnCount=30;
 
+    for(int sevenColumn = 0; sevencolumnCount > sevenColumn; sevenColumn++){
+      for(int sevenRow = 0; sevenrowCount > sevenRow; sevenRow++){
+        
+        sevenX = 600 + 3 + sevenRow*10; 
+        sevenY = 3 + sevenColumn*10;
+        
+      
+        
+        fill(255);
+        noStroke();
+        rect(sevenX, sevenY, 5, 5);
+
+
+      }
+      sevenrowCount --;
+    }
   }
   
   public void draw_section8(){
+    int eightX = 0;
+    int eightY = 0;
+    int eightrowCount=0;
 
+    for(int eightColumn = 0; 30 > eightColumn; eightColumn++){
+      for(int eightRow = 30; eightrowCount < eightRow; eightRow--){
+        
+        eightX = 900 + 3 + eightRow*10; 
+        eightY = 3 + eightColumn*10;
+        
+      
+        
+        fill(255);
+        noStroke();
+        rect(eightX, eightY, 5, 5);
+
+
+      }
+      eightrowCount ++;
   }
-
-
-
-
+  
+}
 
 
 }
